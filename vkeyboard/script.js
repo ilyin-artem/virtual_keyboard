@@ -892,7 +892,7 @@ keysArr.forEach((element) => {
 drawKeyboard();
 const textArea = document.querySelector('#textarea');
 
-const keyboarArea = document.querySelector('#keyboard');
+const keyboardArea = document.querySelector('#keyboard');
 function drawKeyboard() {
     insert.innerHTML = '';
     let insertKeys = '';
@@ -922,7 +922,7 @@ function drawKeyboard() {
 `;
 }
 
-keyboarArea.addEventListener('mousedown', (event) => {
+keyboardArea.addEventListener('mousedown', (event) => {
     event.preventDefault();
 
     if (event.target.closest('.keyboard--key')) {
