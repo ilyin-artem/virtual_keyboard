@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e1e1e1;
+    // font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.centralizer {
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+}
+.key small {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #555555;
+    font-size: 14px;
+}
+
+// Vkeyboard
+
+.keyboard {
+    width: 704px;
+    gap: 10px 7px;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin: 0 auto;
+    padding: 5px;
+    // padding-left: 0;
+    // padding-bottom: 0;
+    background: #888888;
+    border: 3px solid #222222;
+    border-radius: 5px;
+    & .key {
+        // width: 40px;
+        height: 40px;
+        // margin-left: 6px;
+        font-weight: 500;
+        line-height: 40px;
+        text-align: center;
+        color: #ffffff;
+        background: #444444;
+        border-radius: 3px;
+        cursor: pointer;
+        user-select: none;
+        transition: border-radius 0.3s, background-color 0.3s;
+        &:hover {
+            background-color: #79aa89;
+        }
+        &.active {
+            background-color: #2cfd72;
+            border-radius: 50px;
+        }
+    }
+    & [data-event='Backspace'],
+    & [data-event='CapsLock'],
+    & [data-event='ShiftLeft'] {
+        flex-basis: 100px;
+        grid-column-start: span 2;
+    }
+    & [data-event='Enter'],
+    & [data-event='ShiftRight'] {
+        flex-basis: 86px;
+        grid-column-start: span 2;
+    }
+    & [data-event='Delete'] {
+        flex-basis: 44px;
+    }
+
+    & [data-event='Space'] {
+        flex-basis: 330px;
+        grid-column-start: span 7;
+    }
+}
+.textarea {
+    display: block;
+    width: 700px;
+    height: 200px;
+    margin: 10px auto 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #444444;
+}
+.description,
+.language,
+.title {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 30px;
+    color: rgba(101, 134, 177, 0.8);
+    -webkit-text-stroke: 1px rgba(114, 177, 101, 0.8);
+    -webkit-text-fill-color: rgba(101, 134, 177, 0.8);
+}
+
+.hidden {
+    display: none;
+}
