@@ -918,6 +918,7 @@ function drawKeyboard() {
      </div>
     <p class="description">Клавиатура создана в операционной системе Windows</p>
     <p class="language">Для переключения языка комбинация: левыe ctrl + alt</p>
+    <p > <a class="github"href="https://github.com/ilyin-artem/virtual_keyboard/pull/1">Ссылка на Pull request</a></p>
       </div>
 `;
 }
@@ -987,9 +988,9 @@ const keysDownHandler = (eventkey, eventcode, inputMode) => {
                     el.selectionStart++;
                     break;
                 case 'Enter':
-                    console.log('Enter');
-                    el.setRangeText('\r\n', start, end, 'select');
-                    el.selectionStart += 4;
+                    el.setRangeText('\n', start, end);
+                    el.selectionStart++;
+
                     break;
                 case 'Shift':
                     break;
