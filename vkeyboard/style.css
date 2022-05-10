@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e1e1e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.centralizer {
+  margin: 0 auto;
+  font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+}
+
+.key small {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #555555;
+  font-size: 14px;
+}
+
+.keyboard {
+  width: 704px;
+  gap: 10px 7px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[15];
+      grid-template-columns: repeat(15, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  margin: 0 auto;
+  padding: 5px;
+  background: #888888;
+  border: 3px solid #222222;
+  border-radius: 5px;
+}
+
+.keyboard .key {
+  height: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  background: #444444;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: border-radius 0.3s, background-color 0.3s;
+  transition: border-radius 0.3s, background-color 0.3s;
+}
+
+.keyboard .key:hover {
+  background-color: #79aa89;
+}
+
+.keyboard .key.active {
+  background-color: #2cfd72;
+  border-radius: 50px;
+}
+
+.keyboard [data-event='Backspace'],
+.keyboard [data-event='CapsLock'],
+.keyboard [data-event='ShiftLeft'] {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+.keyboard [data-event='Enter'],
+.keyboard [data-event='ShiftRight'] {
+  -ms-flex-preferred-size: 86px;
+      flex-basis: 86px;
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+.keyboard [data-event='Delete'] {
+  -ms-flex-preferred-size: 44px;
+      flex-basis: 44px;
+}
+
+.keyboard [data-event='Space'] {
+  -ms-flex-preferred-size: 330px;
+      flex-basis: 330px;
+  -ms-grid-column: span 7;
+      grid-column-start: span 7;
+}
+
+.textarea {
+  display: block;
+  width: 700px;
+  height: 200px;
+  margin: 10px auto 10px;
+  padding: 10px;
+  font-size: 18px;
+  color: #444444;
+}
+
+.description,
+.language,
+.title {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  color: rgba(101, 134, 177, 0.8);
+  -webkit-text-stroke: 1px rgba(114, 177, 101, 0.8);
+  -webkit-text-fill-color: rgba(101, 134, 177, 0.8);
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
